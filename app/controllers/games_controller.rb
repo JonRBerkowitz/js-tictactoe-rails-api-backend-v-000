@@ -13,4 +13,12 @@ class GamesController < ApplicationController
     render json: @game, status: 200
   end
 
+  def update
+  end
+
+  def index
+    @games = Game.all
+    render json: @games, status: 200
+  end
+
 end
