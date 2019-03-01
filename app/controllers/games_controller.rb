@@ -1,8 +1,7 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
   def create
-    state = ["", "", "", "", "", "" ,"", "", ""]
-    @game = Game.new(state: state)
+    @game = Game.new(game_params)
     if @game.save
       render json: @game, status: 201
     end
